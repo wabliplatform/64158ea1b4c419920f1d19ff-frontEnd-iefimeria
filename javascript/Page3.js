@@ -1,0 +1,3 @@
+let apiPApi = new TempApi.PApi();import TempApi from '../src/index';let P = new TempApi.P();document.getElementById('i4hcc').onclick = (event) => {
+    event.preventDefault();
+    P['ptitle'] = document.querySelector("[annotationname = 'ptitle']").value;apiPApi.createp( P, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); }});};window.onload = () => {};

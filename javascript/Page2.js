@@ -1,0 +1,3 @@
+let apiPApi = new TempApi.PApi();import TempApi from '../src/index';document.getElementById('i80j').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/home' ;}};window.onload = () => {let pId = window.location.pathname.replace('/Page2/','');apiPApi.getp( pId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { document.querySelector('[annotationname = ptitle]').textContent = response.body.query.ptitle; } catch (e) { console.log(e) };}});};
